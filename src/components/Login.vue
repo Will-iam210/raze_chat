@@ -26,13 +26,17 @@ export default {
   text-align: center;
   padding-top: 50px;
 }
+.login-container button:hover {
+  background-color: #7562ff;
+}
+ /*Leonardo*/
 .login-container button {
   width: 30%;
   background-color: #4e37fc;
   color: white;
   font-weight: bold;
   font-size: 18pt;
-  /*Leonardo*/
+ 
   /*Jesus*/
   padding: 20px;
   border-radius: 15px;
@@ -41,9 +45,7 @@ export default {
   cursor: pointer;
 }
 
-.login-container button:hover {
-  background-color: #7562ff;
-}
+
 /*Jesus*/
 
 </style>
