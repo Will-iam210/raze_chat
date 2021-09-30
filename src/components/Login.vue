@@ -1,3 +1,4 @@
+<!--William-->
 <template>
   <div class="login-container">
     <button @click="loginSubmit">Login with Google</button>
@@ -16,8 +17,10 @@ export default {
   }
 }
 </script>
+<!--William-->
 
 <style>
+/*Leonardo*/
 .login-container {
   width: 100%;
   text-align: center;
@@ -29,14 +32,18 @@ export default {
   color: white;
   font-weight: bold;
   font-size: 18pt;
+  /*Leonardo*/
+  /*Jesus*/
   padding: 20px;
   border-radius: 15px;
   border: none;
   box-shadow: #00004040 0px 5px 10px;
   cursor: pointer;
 }
+
 .login-container button:hover {
   background-color: #7562ff;
 }
+/*Jesus*/
 
 </style>

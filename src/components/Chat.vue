@@ -1,10 +1,12 @@
 <template>
+  <!--Jesus-->
   <div class="wrapper">
     <header>
       <h1>Raze Chat</h1>
       <button @click="logout">Logout</button>
     </header>
-
+    <!--Jesus-->
+    <!--Leonardo-->
     <section>
       <main>
         <div v-for="(msg, index) in messages" v-bind:key="'index-'+index"
@@ -12,7 +14,8 @@
           <img :src="msg.photoURL" :alt="msg.displayName">
           <p>{{ msg.text }}</p>
         </div>
-
+ <!--Leonardo-->
+ <!--William-->
         <div ref="scrollable"></div>
       </main>
 
@@ -22,6 +25,7 @@
       </form>
     </section>
   </div>
+  <!--William-->
 </template>
 
 <script>
@@ -48,6 +52,7 @@ export default {
     sentOrReceived(userUID) {
       return userUID === this.user.uid ? 'sent' : 'received'
     },
+    //Leonardo
     async sendMessage() {
       const messageInfo = {
         'userUID': this.user.uid,
@@ -60,11 +65,13 @@ export default {
       this.message = ''
       this.$refs['scrollable'].scrollIntoView({ behavior: 'smooth' })
     }
+    //Leonardo
   }
 }
 </script>
 
 <style>
+/* William*/
 body {
   margin: 0;
   font-family: 'Hind', sans-serif;
@@ -98,6 +105,7 @@ body {
   min-height: 100vh;
   background-color: #F7F8F3;
 }
+
 .wrapper section main {
   padding: 10px;
   height: 75vh;
@@ -106,6 +114,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* William*/
+/*Yisus*/
 .wrapper section main::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -139,6 +149,8 @@ body {
   border: none;
   padding: 0 10px;
 }
+/*Yisus*/
+/*William*/
 .wrapper button {
   background-color: #002C3E;
   border: none;
@@ -180,6 +192,8 @@ body {
 .wrapper .message.sent {
   flex-direction: row-reverse;
 }
+/*William*/
+/*Leonardo*/
 .wrapper .message.sent p {
   color: #fff;
   background: #0b93f6;
@@ -201,5 +215,5 @@ body {
   color: #fff;
   text-align: left;
 }
-
+/*Leonardo*/
 </style>
